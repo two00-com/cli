@@ -1,0 +1,62 @@
+{
+  "name": "@two00/cli",
+  "version": "0.0.0",
+  "author": "Lukas Aichbauer <hello@two00.com> (https://two00.com)",
+  "license": "MIT",
+  "bin": {
+    "two00": "./lib/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/two00-com/cli.git"
+  },
+  "homepage": "https://github.com/two00-com/cli#readme",
+  "bugs": {
+    "url": "https://github.com/two00-com/cli/issues"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development babel src -d lib",
+    "build": "cross-env NODE_ENV=production babel src -d lib",
+    "test": "cross-env NODE_ENV=testing jest --coverage",
+    "prepare": "npm run build"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/cli.js"
+    ],
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@two00/core": "^1.0.1",
+    "chalk": "^2.4.2",
+    "update-notifier": "^3.0.1",
+    "yargs": "^13.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "cross-env": "^5.2.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2"
+  }
+}

@@ -1,0 +1,17 @@
+# modules
+node_modules
+npm-debug.log
+
+# generated
+coverage
+.nyc*
+*.log
+*.cache
+.eslintcache
+yarn.lock
+
+# macOS
+.DS_STORE
+
+# babel transformed
+lib
