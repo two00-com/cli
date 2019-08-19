@@ -1,5 +1,9 @@
 # @two00/cli
 
+[![npm](https://img.shields.io/npm/v/@two00/cli.svg?style=flat-square)](https://www.npmjs.com/package/@two00/cli)
+[![Travis branch](https://img.shields.io/travis/two00-com/cli/master.svg?style=flat-square)](https://travis-ci.org/two00-com/cli)
+[![Codecov branch](https://img.shields.io/codecov/c/github/two00-com/cli/master.svg?style=flat-square)](https://codecov.io/gh/two00-com/cli)
+
 > The public cli tool for [two00](https://two00.com)
 
 ## Table of Contents
