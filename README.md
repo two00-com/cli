@@ -53,7 +53,7 @@ $ crontab -e
 Add the following line to the crontab:
 
 ```sh
-* * * * * two00 serverMonitor UUID > /dev/null 2>&1
+* * * * * two00 server-monitor UUID > /dev/null 2>&1
 ```
 
 > make sure to replace UUID with the UUID of your server monitor of two00
